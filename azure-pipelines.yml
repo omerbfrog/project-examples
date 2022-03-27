@@ -5,7 +5,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JfrogCli@1
+- task: JfrogCliV2@1
   inputs:
+    jfrogPlatformConnection: 'omer-artifactory-saas-platform'
     artifactoryService: 'JFrog Artifactory Instance'
     command: 'jf rt ping'
