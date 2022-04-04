@@ -1,5 +1,5 @@
 trigger:
-- master
+
 
 pool:
   vmImage: ubuntu-latest
@@ -10,3 +10,8 @@ steps:
     jfrogPlatformConnection: 'omer-artifactory-saas-platform'
     artifactoryService: 'JFrog Artifactory Instance'
     command: 'jf rt ping'
+- task: JFrogPip@1
+  inputs:
+    artifactoryConnection: 'Omer-JFrogArtifactoryV2'
+    command: 'install'
+    targetResolveRepo: 'pypi-virtual'
