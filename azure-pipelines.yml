@@ -11,5 +11,6 @@ steps:
   inputs:
     artifactoryConnection: 'Omer-JFrogArtifactoryV2'
     command: 'install'
+    arguments: '-r requirements.txt'
     targetResolveRepo: 'pypi-virtual'
     workingDirectory: 'python-example/'
