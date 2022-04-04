@@ -10,5 +10,6 @@ steps:
 - task: JFrogPip@1
   inputs:
     artifactoryConnection: 'Omer-JFrogArtifactoryV2'
+    command: cd python-example
     command: 'install'
     targetResolveRepo: 'pypi-virtual'
