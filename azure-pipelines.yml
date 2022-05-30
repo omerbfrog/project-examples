@@ -16,4 +16,8 @@ steps:
     workingDirectory: 'python-example/'
 - task: JFrogConan@1
   inputs:
-    command: 'which conan; conan --version'
+    conanCommand: 'Custom'
+    customArguments: 'conan --version'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+- script: conan --version
