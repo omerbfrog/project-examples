@@ -16,5 +16,4 @@ steps:
     workingDirectory: 'python-example/'
 - task: JFrogConan@1
   inputs:
-    command: 'which conan'
-    command: 'conan --version'
+    command: 'which conan; conan --version'
