@@ -14,3 +14,9 @@ steps:
     arguments: '-r requirements.txt'
     targetResolveRepo: 'pypi-virtual'
     workingDirectory: 'python-example/'
+- task: JFrogConan@1
+  inputs:
+    conanCommand: 'Install'
+    pathOrReference: '.'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
